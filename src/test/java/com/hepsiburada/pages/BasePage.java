@@ -1,5 +1,6 @@
 package com.hepsiburada.pages;
 
+import com.hepsiburada.utilities.BrowserUtils;
 import com.hepsiburada.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -20,6 +21,7 @@ public abstract class BasePage {
 
     public static String verifyMessage(String msg){
         String msg_Loc = Driver.get().findElement(By.xpath("//*[text()='"+msg+"']")).getText();
+        BrowserUtils.waitFor(2);
 
         return msg_Loc;
     }

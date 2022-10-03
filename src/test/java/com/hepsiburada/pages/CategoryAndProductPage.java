@@ -32,12 +32,9 @@ public class CategoryAndProductPage extends BasePage {
         BrowserUtils.getWindowHandle();
         BrowserUtils.waitForClickablility(degerlendirmelerTab_Loc,5);
 
-        if (degerlendirmelerTab_Loc.getText().trim().equals("Değerlendirmeler (0)")){
-            Driver.closeDriver();
-        }else {
             BrowserUtils.clickWithJS(degerlendirmelerTab_Loc);
             BrowserUtils.waitFor(1);
-        }
+
     }
 
     public void clickYesButton(){
